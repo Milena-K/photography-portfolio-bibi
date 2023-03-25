@@ -3,7 +3,6 @@ import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import Logo from '@/components/Logo'
 import PhotoGrid from '@/components/Grid'
-import Navbar from '@/components/Navbar'
 import { useState } from 'react'
 import img1 from '@/public/1.jpg'
 import img2 from '@/public/2.jpg'
@@ -25,7 +24,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="">
-        <Navbar/>
       </div>
       <PhotoGrid images={images}/>
     </>
