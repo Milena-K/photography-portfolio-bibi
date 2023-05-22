@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { FormEventHandler, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const [first, setFirst] = useState('');
@@ -8,8 +9,12 @@ const ContactForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
-    // Replace with code to send form data to server
+    const formParams = {
+      name: first + ' ' + last,
+      email,
+      message,
+    }
+    // emailjs.send(г)
   };
 
   return (
@@ -56,13 +61,13 @@ const ContactForm = () => {
           required
           onChange={(event) => setMessage(event.target.value)}
           className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          rows="5"
+          rows={5}
         />
       </div>
-      <div className="flex">
+      <div className="flex text-center">
         <button
           type="submit"
-          className="hover:bg-black bg-white text-black hover:text-white border-black border text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="hover:bg-black hover:text-white bg-white text-black border-black border font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         >
           Send
         </button>
