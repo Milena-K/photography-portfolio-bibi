@@ -10,7 +10,7 @@ export default ({ picture }: { picture: FileInfo }) => {
                 className="hover:blur-sm transition duration-400 ease-out hover:ease-in"
                 key={picture.url}
                 alt="Test image"
-                src={picture.originalFileUrl}
+                src={picture.originalFileUrl!}
                 width={picture.contentInfo?.image?.width}
                 height={picture.contentInfo?.image?.height}
             />

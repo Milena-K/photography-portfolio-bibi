@@ -4,7 +4,6 @@ import styles from '@/styles/Home.module.css'
 import Logo from '@/components/Logo'
 import PhotoGrid from '@/components/Grid'
 import { useContext, useEffect, useState } from 'react'
-import { Context } from './_context';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { FileInfo, UploadcareSimpleAuthSchema, listOfFiles } from '@uploadcare/rest-client';
 import Image from 'next/image';
@@ -42,7 +41,7 @@ export default function Home() {
               className="col"
               key={picture.url}
               alt="Test image"
-              src={picture.originalFileUrl}
+              src={picture.originalFileUrl!}
               width={picture.contentInfo?.image?.width}
               height={picture.contentInfo?.image?.height}
             />
@@ -55,4 +54,3 @@ export default function Home() {
   )
 }
 
-       // <PhotoGrid images={images} />
