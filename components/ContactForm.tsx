@@ -1,6 +1,5 @@
 import React, { LegacyRef, RefObject, SyntheticEvent, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import FormModal from './FormModal';
 
 emailjs.init('service_vi6q3nh');
 
