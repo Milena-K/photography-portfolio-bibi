@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default () => {
+export default function ScrollButton() {
     const [visible, setVisible] = useState(false)
 
     const toggleVisible = () => {

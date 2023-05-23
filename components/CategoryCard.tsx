@@ -1,7 +1,7 @@
 import UploadcareImage from "@uploadcare/nextjs-loader"
 import { FileInfo } from "@uploadcare/rest-client"
 
-export default ({ picture }: { picture: FileInfo }) => {
+export default function CategoryCard({ picture }: { picture: FileInfo }) {
     const width = picture.contentInfo?.image?.width
     console.log()
     return (
