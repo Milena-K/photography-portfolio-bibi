@@ -9,6 +9,7 @@ import { FileInfo, UploadcareSimpleAuthSchema, listOfFiles } from '@uploadcare/r
 import Image from 'next/image';
 import useSWR, { Fetcher } from 'swr';
 import CategoryCard from '@/components/CategoryCard';
+import ScrollButton from '@/components/ScrollButton';
 
 const fetcher: Fetcher<{ pictures: FileInfo[] }, string> = (url) => fetch(url).then(r => r.json())
 // export const fetcher: Fetcher<FileInfo[], string> = async (url) => {
@@ -50,6 +51,7 @@ export default function Home() {
         }) : <></>
         }
       </div>
+      <ScrollButton />
     </>
   )
 }

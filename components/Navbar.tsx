@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(true);
 
   return (
-    <nav className="grid px-24 py-14 md:grid-cols-2 xs:grid-cols-1 gap-4">
+    <nav className="grid min-[320px]:p-8 md:px-24 md:py-14 md:grid-cols-2 xs:grid-cols-1 gap-4">
       <div className="col">
         <Logo />
       </div>
