@@ -29,7 +29,7 @@ export default function Home() {
                     picturesInCategories != null &&
                     categories.map((category, index) => {
                         const picture = picturesInCategories[category][0]
-                        return <Link href={`/category/${encodeURIComponent(category)}`}>
+                        return <Link href={`/category/${encodeURIComponent(category)}`} key={category}>
                             <CategoryCard picture={picture} category={categoriesTitles[index]} />
                         </Link>
                     })

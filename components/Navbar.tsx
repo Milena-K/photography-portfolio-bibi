@@ -35,7 +35,7 @@ const Navbar = () => {
                             routePaths.map((route) => {
                                 const path = "/" + route.toLowerCase()
                                 const isActive = path == activePath
-                                return <li onClick={() => setToggleDropdown(false)}>
+                                return <li onClick={() => setToggleDropdown(false)} key={route}>
                                     <Link href={path}
                                         className={"mr-6 border-b-2  hover:border-grey-500 " + (isActive ? "border-black" : "border-white")}
                                     >{route}</Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
                     <ul className={"border border-black p-2 gap-3 grid min-[300px]:grid-cols-2 sm:grid-cols-3 flex sm:justify-end text-md text-grey-600 " + (toggleDropdown ? 'inline-flex' : 'hidden')} >
                         {
                             categoryPaths.map((category, index) => {
-                                return <li className='sm:text-center' onClick={handleClick}>
+                                return <li className='sm:text-center' onClick={handleClick} key={category}>
                                     <Link href={"/category/" + category}
                                         className=' border-b-2 hover:border-black border-white min-[300px]:text-right pt-2 '
                                     >{categoryTitles[index]}</Link>
