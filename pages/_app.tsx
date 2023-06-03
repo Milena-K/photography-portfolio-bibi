@@ -24,7 +24,7 @@ export interface PictureCategories {
     'whiteshirt': Array<FileInfo>,
 }
 
-export const PictureContext = createContext<PictureCategories | null>(null)
+export const PictureContext = createContext<PictureCategories | undefined>(undefined)
 
 export default function App({ Component, pageProps }: AppProps) {
     const { data: pictures, error, isLoading } = useSWR('/api/pictures', fetcher)
