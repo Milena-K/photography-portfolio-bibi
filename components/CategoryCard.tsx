@@ -14,7 +14,7 @@ export default function CategoryCard({ picture, category }: { picture: FileInfo,
                 height={picture.contentInfo?.image?.height}
             />
             <div>
-                <h1 className="text-4xl text-white fw-bold absolute top-8 left-8">{category}</h1>
+                <h1 className="text-4xl text-black text-center fw-bold pt-2">{category}</h1>
             </div>
         </div >
     )
